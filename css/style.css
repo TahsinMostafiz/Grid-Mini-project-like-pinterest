@@ -75,9 +75,39 @@ h2{
     text-align: center;
 }
 
+/* Mini project like pinteres website layout using Grid layout */
 
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 4px;
+    grid-auto-flow: dense;
+}
 
-/* ==== 1st Grid Practice ==== */
+.container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .horizontal{
+    grid-column: auto / span 3;
+}
+
+.container .vertical{
+    grid-row: auto / span 2;
+}
+
+.container .big{
+    grid-column: auto / span 2;
+    grid-row: auto / span 2;
+}
+
+/* ==== Grid ==== */
+
+.section{
+    margin-top: 20rem;
+}
 .row{
     height: 700px;
     display: grid;
