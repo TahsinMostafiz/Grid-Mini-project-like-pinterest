@@ -6,6 +6,77 @@
     box-sizing: border-box;
 }
 
+/* ==== Colors ==== */
+:root{
+    --1st : #e63946;
+    --2nd : #f1faee;
+    --3rd : #a8dadc;
+    --4th : #457b9d;
+    --5th : #1d3557;
+    --6th : #fee440;
+    --7th : #f28482;
+    --8th : #00f5d4;
+    --9th : #283618;
+    --10th : #bc6c25;
+    --11th : #00bbf9;
+    --12th : #fb8500;
+}
+
+
+.one-bg{
+    background-color: var(--1st);
+}
+
+.two-bg{
+    background-color: var(--11th);
+}
+
+.three-bg{
+    background-color: var(--3rd);
+}
+
+.four-bg{
+    background-color: var(--5th);
+}
+
+.five-bg{
+    background-color: var(--2nd);
+}
+
+.six-bg{
+    background-color: var(--4th);
+}
+
+.seven-bg{
+    background-color: var(--6th);
+}
+
+.eight-bg{
+    background-color: var(--7th);
+}
+.nine-bg{
+    background-color: var(--8th);
+}
+
+.ten-bg{
+    background-color: var(--9th);
+}
+
+.eleven-bg{
+    background-color: var(--10th);
+}
+
+.twelve-bg{
+    background-color: var(--12th);
+}
+
+h2{
+    color: #fff;
+    text-align: center;
+}
+
+
+
 /* ==== 1st Grid Practice ==== */
 .row{
     height: 700px;
@@ -15,29 +86,22 @@
     text-align: center;
 }
 
-.row h2{
-    color: #fff;
-   
-}
 
 .header {
-    background-color: #e63946;
     grid-column-start: 1;
     grid-column-end: -1;
 }
 
 .menu{
-    background-color: #fed9b7;
     grid-column: 1 / 4;
 }
 
 .content{
-    background-color: #219ebc;
+
     grid-column: 4 / -1;
 }
 
 .footer{
-    background-color: #023047;
     grid-column: 1 / span 12;
 }
 
@@ -47,6 +111,7 @@
     font-size: 3rem;
     text-align: center;
     margin: 3rem auto;
+    color: #283618;
 }
 .row2{
     height: 700px;
@@ -59,27 +124,29 @@
     "f f f f f f f f f f f f";
 }
 
-.row2 h2{
-    color: #fff;
-    text-align: center;
-}
-
 .header2 {
-    background-color: #e63946;
     grid-area: h;
 }
 
 .menu2{
-    background-color: #fed9b7;
     grid-area: m;
 }
 
 .content2{
-    background-color: #219ebc;
     grid-area: c;
 }
 
 .footer2{
-    background-color: #023047;
     grid-area: f;
+}
+
+
+/* Grid Template-colunms > auto-fit and minmax */
+
+.row3{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
 }
