@@ -5,14 +5,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* ==== 1st Grid Practice ==== */
 .row{
+    height: 700px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px auto 100px;
+    text-align: center;
 }
 
 .row h2{
     color: #fff;
-    text-align: center;
+   
 }
 
 .header {
@@ -23,15 +28,58 @@
 
 .menu{
     background-color: #fed9b7;
-    grid-column: 1 / 5;
+    grid-column: 1 / 4;
 }
 
 .content{
     background-color: #219ebc;
-    grid-column: 5 / -1;
+    grid-column: 4 / -1;
 }
 
 .footer{
     background-color: #023047;
     grid-column: 1 / span 12;
+}
+
+/* ==== Grid-Template-Areas ==== */
+
+.grid-area-header{
+    font-size: 3rem;
+    text-align: center;
+    margin: 3rem auto;
+}
+.row2{
+    height: 700px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas :
+    "h h h h h h h h h h h h"
+    "m m m c c c c c c c c c"
+    "f f f f f f f f f f f f";
+}
+
+.row2 h2{
+    color: #fff;
+    text-align: center;
+}
+
+.header2 {
+    background-color: #e63946;
+    grid-area: h;
+}
+
+.menu2{
+    background-color: #fed9b7;
+    grid-area: m;
+}
+
+.content2{
+    background-color: #219ebc;
+    grid-area: c;
+}
+
+.footer2{
+    background-color: #023047;
+    grid-area: f;
 }
