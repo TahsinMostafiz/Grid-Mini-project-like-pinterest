@@ -1,0 +1,37 @@
+/* ========= Reset ========= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.row h2{
+    color: #fff;
+    text-align: center;
+}
+
+.header {
+    background-color: #e63946;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.menu{
+    background-color: #fed9b7;
+    grid-column: 1 / 5;
+}
+
+.content{
+    background-color: #219ebc;
+    grid-column: 5 / -1;
+}
+
+.footer{
+    background-color: #023047;
+    grid-column: 1 / span 12;
+}
